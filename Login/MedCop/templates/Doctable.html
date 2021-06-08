@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+#custom {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#custom td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#custom tr
+{background-color: white;}
+
+#custom tr:hover {background-color: #F4C2C2;}
+
+#custom th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+Body{
+background-image:url('/static/img/p1.jpg');
+}
+</style>
+</head>
+<Body>
+<center><h1>NEAREST DOCTORS</h1></center> 
+<table id="custom">
+<tr>
+<th>Sr_no.</th>
+<th>Name</th>
+<th>Hospital</th>
+<th>Location</th>
+<th>Address</th>
+<th>Mobile</th>
+</tr>
+{% for item in data %}
+<tr>
+<td>{{item[0]}}</td>
+<td>{{item[1]}}</td>
+<td>{{item[2]}}</td>
+<td>{{item[3]}}</td>
+<td>{{item[4]}}</td>
+<td>{{item[5]}}</td><br>
+</tr>
+{% endfor %}
+
+</Body>
+<footer>
+<h2><marquee>For a better tommorow make your today good...!!! Learn to stay healthy and Fit..!!</marquee><h2>
+</footer>
+
+</html>
+
